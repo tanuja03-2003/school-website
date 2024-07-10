@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Public School</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #141313;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 24px;
+        }
+
+        nav {
+            background-color: #fff;
+            border-bottom: 2px solid #e5e5e5;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            border-bottom: 3px solid #ff4081;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .announcement {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .announcement img {
+            width: 350px;
+            height: 200px;
+            margin-right: 20px;
+        }
+
+        .announcement.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            flex: 1 1 calc(25% - 10px); /* Adjusts for a maximum of 4 items per row with a 10px gap */
+            max-width: calc(25% - 10px);
+            box-sizing: border-box;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .view {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="Rural Public School Logo">
+            <h1>Welcome to Rural Public School</h1>
+        </div>
+    </header>
+<br>
+<br>
+    <div style="text-align:center;">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation Bar</title>
+        <div>
+            <a href="home.html">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="PRE-PRIMARY.html">PRE-PRIMARY</a>&nbsp;&nbsp;&nbsp;
+            <a href="primary.html">PRIMARY</a>&nbsp;&nbsp;&nbsp;
+            <a href="highschool.html">HIGH SCHOOL</a>&nbsp;&nbsp;&nbsp;
+            <a href="facilities.html">FACILITIES</a>&nbsp;&nbsp;&nbsp;
+            <a href="achievements.html">ACHIEVEMENTS</a>&nbsp;&nbsp;&nbsp;
+            <a href="gallery.html">GALLERY</a>&nbsp;&nbsp;&nbsp;
+            <a href="Contact.html">CONTACT</a>&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+<br>
+<br>
+    <div>
+        <img style="width:100%; height:400px;" src="achievements.jpg" alt="achievements">
+    </div>
+
+    <nav>
+        <a href="#academics" onclick="showSection('academics')">Academics</a>
+        <!-- <a href="#co-curricular" onclick="showSection('co-curricular')">Co-Curricular</a> -->
+        <a href="#sports" onclick="showSection('sports')">Sports</a>
+    </nav>
+
+    <section id="academics" class="active">
+        <h2>Academic Achievements</h2>
+        <div class="announcement">
+            <img src="1st batch.jpg" alt="Academics">
+            <div class="info">
+                <p>Our first batch of students excelled in the SSLC exam with outstanding results. We are proud to announce a 100% pass rate, with 20 students achieving distinctions. This remarkable achievement reflects the hard work and dedication of both our students and staff. Congratulations to everyone for their exceptional performance. We extend our heartfelt thanks to our dedicated staff for their unwavering support and commitment.</p>
+            </div>
+        </div>
+        <div class="announcement reverse">
+            <img src="3rd batch.jpg" alt="3rd batch">
+            <div class="info">
+                <p>This remarkable achievement reflects the hard work and dedication of both our students and staff. Congratulations to everyone for their exceptional performance. We extend our heartfelt thanks to our dedicated staff for their unwavering support and commitment.</p>
+            </div>
+        </div>
+        <div class="announcement">
+            <img src="3rd batch.jpg" alt="3rd batch">
+            <div class="info">
+                <p>This remarkable achievement reflects the hard work and dedication of both our students and staff. Congratulations to everyone for their exceptional performance. We extend our heartfelt thanks to our dedicated staff for their unwavering support and commitment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="co-curricular">
+        <h2>Co-Curricular Activities</h2>
+        <div class="announcement">
+            <img src="path/to/your/co-curricular-image1.jpg" alt="Co-Curricular 1">
+            <div class="info">
+                <p>Our students participate in a variety of co-curricular activities that help in their holistic development. From debates and drama to arts and crafts, our students excel in various fields. These activities help in fostering creativity, teamwork, and leadership skills among our students.</p>
+            </div>
+        </div>
+        <div class="announcement reverse">
+            <img src="path/to/your/co-curricular-image2.jpg" alt="Co-Curricular 2">
+            <div class="info">
+                <p>We encourage our students to take part in inter-school competitions, where they showcase their talents and bring laurels to the school. Our co-curricular programs are designed to provide a balanced education that includes both academic and non-academic pursuits.</p>
+            </div>
+        </div>
+        <div class="announcement">
+            <img src="path/to/your/co-curricular-image3.jpg" alt="Co-Curricular 3">
+            <div class="info">
+                <p>Our students have won numerous awards and accolades in various co-curricular activities, highlighting their dedication and hard work. We are proud of their achievements and continue to support them in their endeavors.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="sports">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="sport1.jpg" alt="sport1">
+                <div class="overlay">
+                    <a href="sport1.jpg" class="view" target="_blank">View</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sport2.jpg" alt="sport2">
+                <div class="overlay">
+                    <a href="sport2.jpg" class="view" target="_blank">View</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sport3.jpg" alt="sport3">
+                <div class="overlay">
+                    <a href="sport3.jpg" class="view" target="_blank">View</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sport4.jpg" alt="sport4">
+                <div class="overlay">
+                    <a href="sport4.jpg" class="view" target="_blank">View</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sport5.jpg" alt="sport5">
+                <div class="overlay">
+                    <a href="sport5.jpg" class="view" target="_blank">View</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sport6.jpg" alt="sport6">
+                <div class="overlay">
+                    <a href="sport6.jpg" class="view" target="_blank">View</a>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="sport7.jpg" alt="sport7">
+                <div class="overlay">
+                    <a href="sport7.jpg" class="view" target="_blank">View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            var activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('academics');
+        });
+    </script>
+</body>
+</html>
